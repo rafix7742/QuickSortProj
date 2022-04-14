@@ -39,17 +39,26 @@ public class QuickSort {
             }
             long ElapsedTime = nanoEnd-nanoStart;
             System.out.println("\n"+"Time Elapsed (Nano Seconds): "+ ElapsedTime);
+            System.out.println(QuickAlg.getComp());
+            System.out.println(QuickAlg.getSwitch());
             System.out.println("\n"+"What if we want to only sort all but the first and last numbers?");
             int arr2[]= {7,9,1,0,12,4,10,2,9,1};
             System.out.println("Unsorted Array:");
             for(int print: arr2){
                 System.out.print(print+" ");
             }
+            nanoStart = System.nanoTime();
+            QuickAlg.reset();
             QuickAlg.quickSort(arr2, 1, 8);
+            nanoEnd = System.nanoTime();
             System.out.println("\n"+"Sorted Array:");
             for(int print: arr2){
                 System.out.print(print+" ");
             }
+            ElapsedTime = nanoEnd-nanoStart;
+            System.out.println("\n"+"Time Elapsed (Nano Seconds): "+ ElapsedTime);
+            System.out.println(QuickAlg.getComp());
+            System.out.println(QuickAlg.getSwitch());
         }else if(UserChoice ==2){
             System.out.println("Enter an Array Size");
             int arrSize = scan.nextInt();

@@ -92,18 +92,20 @@ public class QuickAlg {
     //piviot starts at the left most position 
     int i = begin;
     for(int j = begin + 1; j <= end; j++){
+        comparisons++;
         if (arr[j] > pivot){
             i = i + 1;
             int temp = arr[i];
             arr[i]= arr[j];
             arr[j]= temp;
+            switches++;
         }
     }
 
     int temp = arr[i];
     arr[i] = arr[begin];
     arr[begin] = temp;
-
+    switches++;
     return i;
 
 }
@@ -180,5 +182,12 @@ public class QuickAlg {
      */
     public static int getSwitch(){
         return switches;
+    }
+    /**
+     * reset for the count of comparisons and switches
+     */
+    public static void reset(){
+        switches = 0;
+        comparisons = 0;
     }
 }
