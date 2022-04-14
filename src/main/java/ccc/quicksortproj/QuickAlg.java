@@ -8,11 +8,17 @@ import java.util.Random;
 
 /**
  *
- * @author Hamzi
+ * @author Rafik
  */
 public class QuickAlg {
     public static int comparisons;
     public static int switches;
+    /**
+     * QuickSort algorithm takes an array, a start position and an end position. The array will be sorted in ascending order. 
+     * @param arr The array that is going to be sorted.
+     * @param begin The first position in the array that will be sorted.
+     * @param end  The last position in the array that will be sorted.
+     */
     public static void quickSort(int arr[], int begin, int end) {
         if (begin < end) {
             //Stopping point for recursion
@@ -24,7 +30,13 @@ public class QuickAlg {
             
         }
     }
-
+    /**
+     * A helper method for the QuickSort algorithm that finds a point to partition.
+     * @param arr The array that needs to have a partition position found.
+     * @param begin The first start boundary for the array.
+     * @param end The end boundary for the array.
+     * @return The position of the partition for QuickSort.
+     */
     public static int partition(int arr[], int begin, int end) {
         int pivot = arr[end];
         //chooses the right-most position as the pivot point
@@ -50,6 +62,12 @@ public class QuickAlg {
         //Once we get down to the final values it does one more swap to finalize the sorting
         return i + 1;
     }
+    /**
+     * Reverse QuickSort algorithm takes an array, a start position and an end position. The array will be sorted in descending order.
+     * @param arr The array that is going to be sorted.
+     * @param begin The first position in the array that will be sorted.
+     * @param end The last position in the array that will be sorted.
+     */
     public static void revQuickSort(int arr[], int begin, int end) {
     if (begin < end) {
         //Same stopping clause for recursion
@@ -62,6 +80,13 @@ public class QuickAlg {
         revQuickSort(arr, partitionIndex+1, end);
     }
 }
+    /**
+     * A helper method for the Reverse QuickSort algorithm that finds a point to partition.
+     * @param arr The array that needs to have a partition position found.
+     * @param begin The first start boundary for the array.
+     * @param end The end boundary for the array.
+     * @return The position of the partition for the Reverse QuickSort.
+     */
     public static int revPartition(int arr[], int begin, int end){
     int pivot = arr[begin];
     //piviot starts at the left most position 
@@ -82,6 +107,12 @@ public class QuickAlg {
     return i;
 
 }
+    /**
+     * Random QuickSort algorithm takes an array, a start position and an end position. The array will be sorted in descending order. The pivot element will be randomly chosen
+     * @param arr The array that is going to be sorted.
+     * @param begin The first position in the array that will be sorted.
+     * @param end The last position in the array that will be sorted.
+     */
     public static void rndQs(int arr[], int begin, int end){
         if (begin < end) {
         int partitionIndex = rndPartition(arr, begin, end);
@@ -89,6 +120,12 @@ public class QuickAlg {
         rndQs(arr, partitionIndex+1, end);
     }
     }
+    /**
+     * Helper method for the random partition method, it will find a random pivot between the high and low values.
+     * @param arr The array that will have its values taken from.
+     * @param low The lower bound of the array and the lower bound of the random pivot.
+     * @param high The upper bound of the array and the upper bound of the random pivot.
+     */
     public static void random(int arr[],int low,int high)
     {
      
@@ -99,6 +136,13 @@ public class QuickAlg {
         arr[pivot]=arr[high];
         arr[high]=temp1;
     }
+    /**
+     * A helper method for the Random QuickSort algorithm that finds a point to partition.
+     * @param arr The array that needs to have a partition position found.
+     * @param low The first boundary for the array.
+     * @param high The end boundary for the array.
+     * @return The position of the partition for the Reverse QuickSort.
+     */
     public static int rndPartition(int arr[], int low, int high) {
         // pivot is chosen randomly
         random(arr, low, high);
@@ -123,9 +167,17 @@ public class QuickAlg {
  
         return i+1;
 }
+    /**
+     * Getter for the number of QuickSort comparisons
+     * @return The number of comparisons of QuickSort
+     */
     public static int getComp(){
         return comparisons;
     }
+    /**
+     * Getter for the number of QuickSort switches.
+     * @return The number of switches of QuickSort
+     */
     public static int getSwitch(){
         return switches;
     }

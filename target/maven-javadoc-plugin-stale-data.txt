@@ -1,0 +1,48 @@
+@options
+@packages
+@argfile
+-encoding
+'UTF-8'
+-protected
+-source
+'1.8'
+-sourcepath
+'C:/Users/Hamzi/OneDrive/Documents/GitHub/QuickSortProj/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2022. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Hamzi/OneDrive/Documents/GitHub/QuickSortProj/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'QuickSortProj 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/javase/8/docs/api' 'C:/Users/Hamzi/OneDrive/Documents/GitHub/QuickSortProj/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'QuickSortProj 1.0-SNAPSHOT API'
+ccc.quicksortproj
+'C:/Users/Hamzi/OneDrive/Documents/GitHub/QuickSortProj/src/main/java/ccc/quicksortproj/QuickAlg.java'
+'C:/Users/Hamzi/OneDrive/Documents/GitHub/QuickSortProj/src/main/java/ccc/quicksortproj/QuickSort.java'
+'C:/Users/Hamzi/OneDrive/Documents/GitHub/QuickSortProj/src/main/java/ccc/quicksortproj/RadixQs.java'
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\src\main\java = 1649889840270
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\allclasses-index.html = 1649894533121
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\allpackages-index.html = 1649894533124
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\element-list = 1649894533066
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\help-doc.html = 1649894533160
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\index-all.html = 1649894533154
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\index.html = 1649894533156
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\jquery-ui.overrides.css = 1649894533216
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\member-search-index.js = 1649894533129
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\module-search-index.js = 1649894533125
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\overview-tree.html = 1649894533104
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\package-search-index.js = 1649894533126
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\script.js = 1649894533169
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\search.js = 1649894533179
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\stylesheet.css = 1649894533168
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\tag-search-index.js = 1649894533130
+C:\Users\Hamzi\OneDrive\Documents\GitHub\QuickSortProj\target\site\apidocs\type-search-index.js = 1649894533128
