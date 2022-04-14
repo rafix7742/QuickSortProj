@@ -130,10 +130,9 @@ public class QuickAlg {
      */
     public static void random(int arr[],int low,int high)
     {
-     
+     //Does not count as a switch as this is solely for a random value
         Random rand= new Random();
         int pivot = rand.nextInt(high-low)+low;
-         
         int temp1=arr[pivot]; 
         arr[pivot]=arr[high];
         arr[high]=temp1;
@@ -149,9 +148,10 @@ public class QuickAlg {
         // pivot is chosen randomly
         random(arr, low, high);
         int pivot = arr[high];
-
+            
         int i = (low - 1); // index of smaller element
         for (int j = low; j < high; j++) {
+            comparisons++;
             // If current element is smaller than or
             // equal to pivot
             if (arr[j] < pivot) {
@@ -161,12 +161,13 @@ public class QuickAlg {
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
+                switches++;
             }
         }
         int temp = arr[i+1];
         arr[i+1] = arr[high];
         arr[high] = temp;
- 
+        switches++;
         return i+1;
 }
     /**
@@ -184,7 +185,7 @@ public class QuickAlg {
         return switches;
     }
     /**
-     * reset for the count of comparisons and switches
+     * Reset for the count of comparisons and switches
      */
     public static void reset(){
         switches = 0;

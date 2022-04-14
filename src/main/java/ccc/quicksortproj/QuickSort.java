@@ -39,8 +39,8 @@ public class QuickSort {
             }
             long ElapsedTime = nanoEnd-nanoStart;
             System.out.println("\n"+"Time Elapsed (Nano Seconds): "+ ElapsedTime);
-            System.out.println(QuickAlg.getComp());
-            System.out.println(QuickAlg.getSwitch());
+            System.out.println("The number of comparisons is: "+QuickAlg.getComp());
+            System.out.println("The number of switches is: "+QuickAlg.getSwitch());
             System.out.println("\n"+"What if we want to only sort all but the first and last numbers?");
             int arr2[]= {7,9,1,0,12,4,10,2,9,1};
             System.out.println("Unsorted Array:");
@@ -57,8 +57,8 @@ public class QuickSort {
             }
             ElapsedTime = nanoEnd-nanoStart;
             System.out.println("\n"+"Time Elapsed (Nano Seconds): "+ ElapsedTime);
-            System.out.println(QuickAlg.getComp());
-            System.out.println(QuickAlg.getSwitch());
+            System.out.println("The number of comparisons is: "+QuickAlg.getComp());
+            System.out.println("The number of switches is: "+QuickAlg.getSwitch());
         }else if(UserChoice ==2){
             System.out.println("Enter an Array Size");
             int arrSize = scan.nextInt();
@@ -85,8 +85,8 @@ public class QuickSort {
             System.out.println("");
             System.out.println("Time elapsed in miliseconds: " + elapsedTime);
             System.out.println("Time elapsed in nanoseconds: " + elapsedNano);
-            System.out.println(QuickAlg.getComp());
-            System.out.println(QuickAlg.getSwitch());
+            System.out.println("The number of comparisons is: "+QuickAlg.getComp());
+            System.out.println("The number of switches is: "+QuickAlg.getSwitch());
         }else if(UserChoice ==3){
             System.out.println("Enter an Array Size");
             int arrSize = scan.nextInt();
@@ -94,6 +94,7 @@ public class QuickSort {
             for (int i = 0; i < arr.length; i++) {
                 arr[i] = (int) ((Math.random()*100) +1);
             }
+            //^ remove for larger numbers
             int begin = 0;
             int end = arr.length - 1;
             long startTime = System.currentTimeMillis();
@@ -107,9 +108,12 @@ public class QuickSort {
             for (int j = 0; j < arr.length; j++) {
                 System.out.print(arr[j] + " ");
             }
+            //switch to println for larger sets
             System.out.println("");
             System.out.println("Time elapsed in miliseconds: " + elapsedTime);
             System.out.println("Time elapsed in nanoseconds: " + elapsedNano);
+            System.out.println("The number of comparisons is: "+QuickAlg.getComp());
+            System.out.println("The number of switches is: "+QuickAlg.getSwitch());
         }else if(UserChoice ==4){
             System.out.println("Enter an Array Size");
             int arrSize = scan.nextInt();
@@ -127,11 +131,14 @@ public class QuickSort {
             long elapsedTime = stopTime - startTime;
             long elapsedNano = nanoEnd - nanoStart;
             for (int j = 0; j < arr.length; j++) {
-                System.out.print(arr[j] + " ");
+                System.out.println(arr[j]);
             }
+            //switch to print + " " to have numbers side by side
             System.out.println("");
             System.out.println("Time elapsed in miliseconds: " + elapsedTime);
             System.out.println("Time elapsed in nanoseconds: " + elapsedNano);
+            System.out.println("The number of comparisons is: "+QuickAlg.getComp());
+            System.out.println("The number of switches is: "+QuickAlg.getSwitch());
         }else if(UserChoice ==5){
             System.out.println("Enter an array size");
             int arrSize = scan.nextInt();
@@ -139,28 +146,40 @@ public class QuickSort {
             for (int i = 0; i < arr.length; i++) {
                 String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdefghijklmnop";
                 StringBuilder salt = new StringBuilder();
+                //For the ability to make strings of changing values
                 Random rnd = new Random();
                 while (salt.length() < (int) (Math.random() * 26) + 1) { // length of the random string.
                     int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+                    //random position within the string to convert into characters
                     salt.append(SALTCHARS.charAt(index));
+                    //adding characters tod teh salt builder
                 }
                 arr[i] = salt.toString();
+                //converting from string builder into the array
             }
-            // calling sort function to sort the array using
-            // 3-way-radix-quicksort.
-            for (int i = 0; i < arr.length; ++i) {
-                System.out.print(arr[i] + " ");
-            }   //Quick3WayStringSort ob = new Quick3WayStringSort();
+            System.out.println("Would you like to print the original array?");
+            System.out.println("1. Yes");
+            System.out.println("2. No");
+            int c = scan.nextInt();
+            if(c == 1){
+                for (int i = 0; i < arr.length; ++i) {
+                System.out.print(arr[i]+ " ");
+            } 
+            }
+              //Quick3WayStringSort ob = new Quick3WayStringSort();
             System.out.println("");
+            long startTime = System.currentTimeMillis();
+            long nanoStart = System.nanoTime();
             RadixQs.sort(arr, 0, arr.length - 1, 0);
-
-            // printing the sorted array;
-            // here w are calling function by passing parameters
-            // using references .
+            long nanoEnd = System.nanoTime();
+            long stopTime = System.currentTimeMillis();
+            long elapsedTime = stopTime - startTime;
+            long elapsedNano = nanoEnd - nanoStart;
             for (int i = 0; i < arr.length; ++i) {
                 System.out.println(arr[i]);
             }
-        
+            System.out.println("Time elapsed in miliseconds: " + elapsedTime);
+            System.out.println("Time elapsed in nanoseconds: " + elapsedNano);
             
         }else{
             System.exit(0);
