@@ -73,8 +73,8 @@ public class QuickAlg {
         //Same stopping clause for recursion
         int partitionIndex = revPartition(arr, begin, end);
         //same partition method
-        revQuickSort(arr, begin, partitionIndex);
-    //                          not minus 1^(it might be minus 1?)
+        revQuickSort(arr, begin, partitionIndex-1);
+    //                          not minus 1^ (double check if this needs to be minus 1)
     //the only key difference here is the partition index is not minus one 
     //this makes sure we do not get a stack overflow error
         revQuickSort(arr, partitionIndex+1, end);
@@ -83,7 +83,7 @@ public class QuickAlg {
     /**
      * A helper method for the Reverse QuickSort algorithm that finds a point to partition.
      * @param arr The array that needs to have a partition position found.
-     * @param begin The first start boundary for the array.
+     * @param begin The start boundary for the array.
      * @param end The end boundary for the array.
      * @return The position of the partition for the Reverse QuickSort.
      */
@@ -139,8 +139,8 @@ public class QuickAlg {
     /**
      * A helper method for the Random QuickSort algorithm that finds a point to partition.
      * @param arr The array that needs to have a partition position found.
-     * @param low The first boundary for the array.
-     * @param high The end boundary for the array.
+     * @param low The lower boundary for the array.
+     * @param high The upper boundary for the array.
      * @return The position of the partition for the Reverse QuickSort.
      */
     public static int rndPartition(int arr[], int low, int high) {

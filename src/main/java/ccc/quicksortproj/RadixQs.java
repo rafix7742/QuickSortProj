@@ -16,11 +16,12 @@ public class RadixQs {
     /**
      * 3-way partitioning using dth character
      *
-     * @param a array of strings
-     * @param lo start index in array
-     * @param hi end index in array
-     * @param d using dth character
+     * @param a The array to be sorted.
+     * @param lo The lower boundary in the array that will be sorted.
+     * @param hi The upper boundary in the array that will be sorted.
+     * @param d using dth character (in the client code d should be 0).
      */
+    // Code was taken from https://github.com/JaneLdq/coursera-algorithms/blob/master/src/main/java/me/janeldq/algorithms/sort/Quick3WayStringSort.java
     public static void sort(String[] a, int lo, int hi, int d) {
         if (lo >= hi){
             return;
